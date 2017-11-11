@@ -1,0 +1,52 @@
+@font-face {
+	font-family: "Open Sans Semibold" ;
+	src: url('../fonts/OpenSansSemiBold.woff');
+}
+@font-face {
+	font-family: "Open Sans Bold";
+	src: url('../fonts/OpenSans-Bold.woff');
+}
+@font-face {
+    font-family: "Fira Sans";
+    src: url('../fonts/FiraSans-Regular.woff');
+}
+@font-face {
+    font-family: "Fira Sans Light";
+    src: url('../fonts/FiraSans-Light.woff');
+}
+@font-face {
+    font-family: "Fira Sans Medium";
+    src: url('../fonts/FiraSans-Medium.woff');
+}
+@font-face {
+    font-family: "Fira Sans Bold";
+    src: url('../fonts/FiraSans-Bold.woff');
+}
+
+@mixin openSans($style) {
+	@if $style == semibold {
+		font-family: 'Open Sans Semibold', sans-serif;
+	}
+
+	@if $style == bold {
+		font-family: 'Open Sans Bold', sans-serif;
+	}
+}
+
+@mixin firaSans($style) {
+	@if $style == regular {
+		font-family: "Fira Sans", sans-serif;
+	}
+	
+	@if $style == light {
+		font-family: "Fira Sans Light", sans-serif;
+	}
+
+	@if $style == medium {
+		font-family: "Fira Sans Medium", sans-serif;
+	}
+
+	@if $style == bold {
+		font-family: "Fira Sans Bold", sans-serif;
+	}
+}

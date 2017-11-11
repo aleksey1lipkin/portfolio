@@ -1,0 +1,102 @@
+
+.nav {
+	width: 25%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+.nav__list {
+	margin-top: 16px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+}
+.nav__item {
+	padding-left: 53px;
+}
+
+.nav__link {
+	display: block;
+	position: relative;
+	@include firaSans(regular);
+	font-size: 18px;
+	text-decoration: none;
+	line-height: 1.333;
+	color: $lightBlack;
+	margin-bottom: 21px;
+}
+.nav__link_active {
+	@include firaSans(bold);
+	color: $blue;	
+}
+.nav__link:hover {
+	color: $blue;
+}
+.nav__link::before {
+	content: "";
+	position: absolute;
+	left: -25px;
+	width: 16px;
+	height: 18px;
+	background: url('../img/sprite.png') no-repeat;
+}
+
+.nav__link_about::before {
+	background-position: -0px -296px;	
+}
+.nav__link_career::before {
+	width: 17px;
+	height: 18px;
+	top: 2px;
+	background-position: -0px -243px;
+}
+.nav__link_portfolio::before {
+	width: 18px;
+	height: 15px;
+	left: -27px;
+    top: 2px;
+	background-position: -0px -210px;
+}
+
+$navLink: about, career, portfolio;
+@each $type in $navLink {
+	.nav__link:hover {
+		&.nav__link_#{$type}::before {
+			@if $type == about {
+				background-position: -0px -278px;
+			} @else if $type == career {
+				background-position: -0px -225px;
+				} @else if $type == portfolio {
+				background-position: -0px -195px;	
+			}
+		}
+	}
+}
+.nav__link_active::before {
+	background-position: -0px -278px;
+}
+.nav__link_active::after {
+	content: "";
+	position: absolute;
+	width: 6px;
+	height: 44px;
+	background-color: $blue;
+	left: 94px;
+    top: -11px;
+}
+
+@media screen and (max-width: 850px) {
+	.nav, .nav__list {
+		width: 100%;
+		flex-flow: row wrap;
+	}
+	.nav__item {
+		flex: 1 0 auto;
+	}
+}
+
+@media screen and (max-width: 400px) {
+	.nav, .nav__list {
+		align-items: center;
+	}
+}

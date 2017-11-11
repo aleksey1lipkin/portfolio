@@ -1,0 +1,151 @@
+
+.header {
+    width: 100%;
+    background-color: #fff;
+    box-shadow: 0 1px 3px 0 rgba(0, 0, 0, .2);
+    margin-bottom: 21px;
+}
+.header__body {
+    display: flex;
+    flex-flow: row wrap;
+    max-width: 940px;
+    margin: 0 auto;
+    align-items: center;
+    padding-top: 10px;
+    padding-bottom: 9px;
+}
+
+.avatar {
+	width: 60px;
+    height: 60px;
+    border: 1px solid rgb(215, 215, 215);
+    border-radius: 50%;
+    box-shadow: 0 0 0 1px rgb(190, 190, 190);
+    overflow: hidden;
+}
+.avatar__image {
+	width: 100%;
+}
+.header__image {
+    
+}
+.header__title {
+    @include firaSans(regular);
+    font-size: 18px;
+    margin-left: 19px;
+    color: $lightBlack;
+    line-height: 1.556;
+    margin-top: 2px;
+}
+.communications {
+	margin-left: auto;
+    position: relative;
+}
+.contacts {
+    margin-top: 1px;
+}
+.contacts__switcher {
+	@include firaSans(bold);
+    font-size: 18px;
+    text-decoration: none;
+    color: #33c1e3;
+    padding-bottom: 1px;
+    border-bottom: 1px dotted $blue;
+    transition: all 0.1s 0.1s ease-in;
+}
+.contacts-wrapper {
+    position: absolute;
+    opacity: 0;
+    top: 36px;
+    left: -37px;
+    border: 1px solid #dedede;
+    padding-right: 8px;
+    padding-top: 9px;
+    padding-left: 46px;
+    border-radius: 10px;
+    background-color: #fff;
+    transition: all 0.1s 0.1s ease-in;
+    visibility: hidden;
+}
+.contacts-wrapper::before {
+	content: "";
+    display: block;
+    width: 10px;
+    height: 9px;
+    position: absolute;
+    background: #fff;
+    border: 1px solid #dedede;
+    transform: rotate(42deg);
+    border-right: 0;
+    border-bottom: 0;
+    top: -6px;
+    left: 50%;
+    margin-left: -4px;
+}
+.communications:hover .contacts-wrapper {
+	opacity: 1;
+	visibility: visible;
+    z-index: 1000;
+}
+.communications:hover .contacts__switcher {
+	color: $red;
+	border-color: $red;
+}
+.contacts__list {
+	
+}
+.contacts__item {
+	margin-bottom: 16px;
+}
+.contacts__list :last-child {
+	margin-bottom: 7px;
+}
+.contacts-list__link {
+    @include firaSans(light);
+    font-size: 18px;
+    position: relative;
+    line-height: 1.556;
+    display: block;
+    text-decoration: none;
+    color: $black;
+}
+.contacts-list__link::before {
+	content: "";
+	position: absolute;
+	left: -26px;
+    top: 4px;
+	background: url('../img/sprite.png') no-repeat;
+	display: inline-block;
+}
+
+$linkBackground: mail, phone, skype;
+@each $type in $linkBackground {
+    .contacts-list__link_#{$type}::before {
+        @if $type == mail {
+            background-position: 0px -180px;
+            top: 6px;
+            width: 19px;
+            height: 15px;
+        } @else if $type == phone {
+            background-position: -16px -261px;
+            width: 15px;
+            height: 16px;
+        } @else if $type == skype {
+            background-position: 0px -261px;
+            width: 16px;
+            height: 17px;
+        }
+    }
+}
+
+@media screen and (max-width: 400px) {
+    .header__body {
+        flex-flow: column;
+    }
+    .communications {
+        margin-left: 0;
+    }
+    .header__title {
+        margin-left: 0;
+    }
+}

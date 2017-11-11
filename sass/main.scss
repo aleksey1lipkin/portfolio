@@ -1,0 +1,82 @@
+$lightBlack: #727272;
+$black: #414141;
+$grey: #f6f6f6;
+$blue: #33c1e3;
+$red: #e85f61;
+
+
+@import "misc/fonts.scss";
+@import "misc/reset.scss";
+@import "misc/adjustment.scss";
+
+.wrapper {
+    width: 300px; 
+    position: absolute;
+    margin: 0 auto;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 10px;
+    box-shadow: 0px 1px 2px 0px rgba(0, 0, 0, 0.3);
+    background-color: #fff;
+}
+.card {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.avatar {
+    width: 140px;
+    height: 140px;
+    background-color: $grey;
+    border: 1px solid rgb(190, 190, 190);
+    box-shadow: 0 0 0 1px rgb(215, 215, 215);
+    border-radius: 50%;
+    margin-top: -70px;
+    margin-bottom: 13px;
+    overflow: hidden;
+}
+.avatar__image {
+    width: 100%;
+}
+.card__header {                          
+    @include openSans(semibold);
+    width: 144px;
+    margin-bottom: 15px;
+    text-align: center;
+    font-size: 21px;
+    line-height: 1.3333333;
+    color: $black;
+}
+.login {
+    width: 100%;
+    background-color: $blue;
+    border-radius: 0 0 10px 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0px 1px 2px 0px rgba(0, 0, 0, 0.3);
+}
+.login__button {
+    @include firaSans(bold);
+    border: 2px solid #fff;
+    font-size: 14px;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 30px;
+    color: #fff;
+    padding: 4px 13px;
+    line-height: 2;
+    transition: all 0.2s ease-out;
+    margin-top: 19px;
+    margin-bottom: 19px;
+
+    &:hover {
+        color: $blue;
+        background-color: #fff; 
+    }
+}
+
+

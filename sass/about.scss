@@ -1,0 +1,115 @@
+$lightBlack: #727272;
+$black: #414141;
+$grey: #f6f6f6;
+$blue: #33c1e3;
+$red: #e85f61;
+
+@import "misc/fonts.scss";
+
+.wrapper {
+	min-height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+.container {
+	flex: 1 0 auto;
+	flex-flow: row wrap;
+	display: flex;
+    max-width: 940px;
+    margin: 0 auto;
+    width: 100%;
+    justify-content: space-between;
+}
+
+/*MAIN__START*/
+
+.portrait {
+	width: 230px;
+	height: 230px;
+	border: 5px solid #fff;
+	border-radius: 50%;
+	background-color: $grey;
+	overflow: hidden;
+	margin-top: 4px;
+}
+.portrait__image {
+	width: 100%;
+}
+.main {
+	width: 75%;
+    max-width: 665px;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+}
+.main__info {
+	display: flex;
+    flex-flow: column wrap;
+    align-items: flex-start;
+    margin-right: 4px;
+}
+
+.main__header {
+	@include firaSans(medium);
+	font-size: 35px;
+    line-height: 1.286;
+    margin-bottom: 15px;
+}
+.main__text {
+	@include firaSans(light);
+	font-size: 18px;
+    line-height: 26px;
+    max-width: 376px;
+    max-height: 286px;
+    margin-bottom: 58px;
+    overflow-y: auto;
+}
+
+.main__button {
+	font-size: 14px;
+	@include openSans(bold);
+    line-height: 2;
+    align-self: flex-end;
+    color: $red;
+    border: 2px solid $red;
+    border-radius: 20px;
+    background-color: $grey;
+    padding: 4px 13px;
+    transition: all 0.2s ease-in;
+    margin-bottom: 106px;
+    margin-right: -4px;
+}
+.main__button::before {
+	content: "";
+	display: inline-block;
+	height: 14px;
+	width: 14px;
+	margin-right: 8px;
+	background: url('../img/sprite.png') -17px -239px no-repeat;
+	transition-delay: 0.1s;
+}
+.main__button:hover {
+	color: #fff;
+	background-color: $red;
+}
+.main__button:hover.main__button::before {
+	content: "";
+	background: url('../img/sprite.png') -17px -225px no-repeat;
+}
+/*MAIN__END*/
+
+@media screen and (max-width: 850px) {
+	.container {
+		flex-direction: column;
+	}
+	.main {
+		width: 100%;
+		max-width: 940px;
+		justify-content: space-around;
+	}
+}
+@media screen and (max-width: 625px) {
+	.main__button {
+		align-self: center;
+	}
+}
