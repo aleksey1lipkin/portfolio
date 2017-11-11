@@ -302,7 +302,10 @@ html {
 
 @media screen and (max-width: 400px) {
   .nav, .nav__list {
-    align-items: center; } }
+    flex-flow: column;
+    align-items: center; }
+  .nav__item {
+    padding-left: 0; } }
 
 .footer {
   width: 100%;
