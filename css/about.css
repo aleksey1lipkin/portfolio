@@ -109,7 +109,7 @@
   background: url("../img/sprite.png") -17px -225px no-repeat; }
 
 /*MAIN__END*/
-@media screen and (max-width: 850px) {
+@media screen and (max-width: 900px) {
   .container {
     flex-direction: column; }
   .main {
