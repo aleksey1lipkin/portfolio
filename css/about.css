@@ -59,8 +59,7 @@
 .main__info {
   display: flex;
   flex-flow: column wrap;
-  align-items: flex-start;
-  margin-right: 4px; }
+  align-items: flex-start; }
 
 .main__header {
   font-family: "Fira Sans Medium", sans-serif;
@@ -72,10 +71,11 @@
   font-family: "Fira Sans Light", sans-serif;
   font-size: 18px;
   line-height: 26px;
-  max-width: 376px;
+  max-width: 380px;
   max-height: 286px;
   margin-bottom: 58px;
-  overflow-y: auto; }
+  overflow: scroll;
+  overflow-x: hidden; }
 
 .main__button {
   font-size: 14px;
@@ -88,8 +88,7 @@
   background-color: #f6f6f6;
   padding: 4px 13px;
   transition: all 0.2s ease-in;
-  margin-bottom: 106px;
-  margin-right: -4px; }
+  margin-bottom: 106px; }
 
 .main__button::before {
   content: "";
@@ -107,6 +106,13 @@
 .main__button:hover.main__button::before {
   content: "";
   background: url("../img/sprite.png") -17px -225px no-repeat; }
+
+.main__text::-webkit-scrollbar {
+  width: 5px; }
+
+.main__text::-webkit-scrollbar-thumb {
+  box-shadow: inset 0 0 0 5px #d8d8d8;
+  border-radius: 10px; }
 
 /*MAIN__END*/
 @media screen and (max-width: 900px) {
