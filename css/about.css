@@ -89,7 +89,8 @@
   padding: 4px 13px;
   transition: all 0.2s ease-in;
   margin-bottom: 106px;
-  outline: none; }
+  outline: none;
+  cursor: pointer; }
 
 .main__button::before {
   content: "";

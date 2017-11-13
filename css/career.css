@@ -71,7 +71,8 @@
   flex-flow: row nowrap;
   justify-content: space-between;
   width: 100%;
-  margin-bottom: 21px; }
+  margin-bottom: 21px;
+  cursor: pointer; }
 
 .post__year {
   align-self: center;
