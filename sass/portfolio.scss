@@ -1,0 +1,125 @@
+$lightBlack: #727272;
+$black: #414141;
+$grey: #f6f6f6;
+$blue: #33c1e3;
+$red: #e85f61;
+
+@import "misc/fonts.scss";
+
+.wrapper {
+	min-height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+.container {
+	flex: 1 0 auto;
+	flex-flow: row wrap;
+	display: flex;
+    max-width: 940px;
+    margin: 0 auto;
+    width: 100%;
+}
+.main {
+    width: 75%;
+}
+.main__header {
+    font-size: 35px;
+    @include firaSans(medium);
+    line-height: 1.286;
+    padding-left: 3px;
+    margin-bottom: 20px;
+}
+.portfolio {
+	display: flex;
+	flex-flow: row wrap;
+	justify-content: space-between;
+	width: 100%;
+	padding-left: 5px;
+	&:after {
+    	content: "";
+    	width: 31.428%;
+    }
+}
+.card {
+	width: 31.429%;
+	cursor: pointer;
+}
+.card:hover {
+	.content__title {
+		color: $red;
+	}
+}
+.card__example {
+	width: 100%;
+	height: 172px;
+	border-radius: 10px 10px 0 0;
+	background-color: $grey;
+	box-shadow: 0px 1px 3px 0px rgba(0, 0, 0, 0.2);
+}
+
+$examples: app, scapes, creative, frog, carbonara;
+@each $type in $examples {
+	.card__example_#{$type} {
+		background: url('../img/for-#{$type}.jpg') no-repeat;
+		background-size: cover;
+	}
+}
+
+.content {
+	width: 100%;
+	background-color: #fff;
+	border-radius: 0 0 10px 10px;
+	padding-left: 18px;
+    padding-top: 16px;
+    margin-bottom: 20px;
+    box-shadow: 0px 1px 3px 0px rgba(0, 0, 0, 0.2);
+}
+.content__title {
+	@include firaSans(regular);
+	font-size: 21px;
+	color: $blue;
+	line-height: 1.143;
+	margin-bottom: 5px;
+	transition: all 0.2s ease-in;
+}
+.content__text {
+	@include firaSans(light);
+	font-size: 14px;
+	color: $lightBlack;
+	margin-bottom: 14px;
+}
+.content__about {
+	@include firaSans(medium);
+	font-size: 14px;
+	color: rgb(174, 174, 174);
+	padding-bottom: 17px;
+}
+.content__about::before {
+	font-family: "FontAwesome";
+	font-size: 20px;
+	margin-right: 7px;
+}
+$aboutBefore: phone, screen;
+@each $type in $aboutBefore {
+	.content__about_#{$type}::before {
+		@if $type == phone {
+			content: "\f10b";
+		} @else if $type == screen {
+			content: "\f108";
+		}
+	}
+}
+//change active link to this page
+.nav__link_active::before {
+    background-position: -0px -195px;
+}
+@media screen and (max-width: 900px) {
+	.main {
+		width: 100%;
+	}
+}
+@media screen and (max-width: 625px) {
+	.card {
+		width: 100%;
+	}
+}

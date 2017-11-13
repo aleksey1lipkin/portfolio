@@ -22,7 +22,6 @@
     font-family: "Fira Sans Bold";
     src: url('../fonts/FiraSans-Bold.woff');
 }
-
 @mixin openSans($style) {
 	@if $style == semibold {
 		font-family: 'Open Sans Semibold', sans-serif;
