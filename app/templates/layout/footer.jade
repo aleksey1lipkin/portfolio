@@ -1,0 +1,13 @@
+- var footerLinks = {'facebook':'#', 'vk':'#', 'twitter':'#'};
+footer.footer
+	.footer__body
+		span.footer__info
+			| Конфидециальность сайта
+		.footer__social
+			ul.footer__list
+				each val, key in footerLinks
+					li.footer__item
+						a(
+						class="footer__link footer__link_#{key}"
+						href=val
+						title=key)

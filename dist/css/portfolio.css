@@ -1,0 +1,141 @@
+@font-face {
+  font-family: "Open Sans Semibold";
+  src: url("../fonts/OpenSansSemiBold.woff"); }
+
+@font-face {
+  font-family: "Open Sans Bold";
+  src: url("../fonts/OpenSans-Bold.woff"); }
+
+@font-face {
+  font-family: "Fira Sans";
+  src: url("../fonts/FiraSans-Regular.woff"); }
+
+@font-face {
+  font-family: "Fira Sans Light";
+  src: url("../fonts/FiraSans-Light.woff"); }
+
+@font-face {
+  font-family: "Fira Sans Medium";
+  src: url("../fonts/FiraSans-Medium.woff"); }
+
+@font-face {
+  font-family: "Fira Sans Bold";
+  src: url("../fonts/FiraSans-Bold.woff"); }
+
+.wrapper {
+  min-height: 100%;
+  display: flex;
+  flex-direction: column; }
+
+.container {
+  flex: 1 0 auto;
+  flex-flow: row wrap;
+  display: flex;
+  max-width: 940px;
+  margin: 0 auto;
+  width: 100%; }
+
+.main {
+  width: 75%; }
+
+.main__header {
+  font-size: 35px;
+  font-family: "Fira Sans Medium", sans-serif;
+  line-height: 1.286;
+  padding-left: 3px;
+  margin-bottom: 20px; }
+
+.portfolio {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-between;
+  width: 100%;
+  padding-left: 5px; }
+  .portfolio:after {
+    content: "";
+    width: 31.428%; }
+
+.card {
+  width: 31.429%;
+  cursor: pointer; }
+
+.card:hover .content__title {
+  color: #e85f61; }
+
+.card__example {
+  width: 100%;
+  height: 172px;
+  border-radius: 10px 10px 0 0;
+  background-color: #f6f6f6;
+  box-shadow: 0px 1px 3px 0px rgba(0, 0, 0, 0.2); }
+
+.card__example_app {
+  background: url("../img/for-app.jpg") no-repeat;
+  background-size: cover; }
+
+.card__example_scapes {
+  background: url("../img/for-scapes.jpg") no-repeat;
+  background-size: cover; }
+
+.card__example_creative {
+  background: url("../img/for-creative.jpg") no-repeat;
+  background-size: cover; }
+
+.card__example_frog {
+  background: url("../img/for-frog.jpg") no-repeat;
+  background-size: cover; }
+
+.card__example_carbonara {
+  background: url("../img/for-carbonara.jpg") no-repeat;
+  background-size: cover; }
+
+.content {
+  width: 100%;
+  background-color: #fff;
+  border-radius: 0 0 10px 10px;
+  padding-left: 18px;
+  padding-top: 16px;
+  margin-bottom: 20px;
+  box-shadow: 0px 1px 3px 0px rgba(0, 0, 0, 0.2); }
+
+.content__title {
+  font-family: "Fira Sans", sans-serif;
+  font-size: 21px;
+  color: #33c1e3;
+  line-height: 1.143;
+  margin-bottom: 5px;
+  transition: all 0.2s ease-in; }
+
+.content__text {
+  font-family: "Fira Sans Light", sans-serif;
+  font-size: 14px;
+  color: #727272;
+  margin-bottom: 14px; }
+
+.content__about {
+  font-family: "Fira Sans Medium", sans-serif;
+  font-size: 14px;
+  color: #aeaeae;
+  padding-bottom: 17px; }
+
+.content__about::before {
+  font-family: "FontAwesome";
+  font-size: 20px;
+  margin-right: 7px; }
+
+.content__about_phone::before {
+  content: "\f10b"; }
+
+.content__about_screen::before {
+  content: "\f108"; }
+
+.nav__link_active::before {
+  background-position: -0px -195px; }
+
+@media screen and (max-width: 900px) {
+  .main {
+    width: 100%; } }
+
+@media screen and (max-width: 625px) {
+  .card {
+    width: 100%; } }

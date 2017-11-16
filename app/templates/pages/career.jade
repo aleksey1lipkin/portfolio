@@ -1,0 +1,67 @@
+extends about.jade
+block meta
+	meta(
+	name="description"
+	content="Анатолий Анатольев визитка, html/css разработчик. Опыт работы 2012-2016")
+	meta(
+	name="keywords"
+	content="Анатолий, Анатольев, резюме, опыт работы")
+block title
+	title Анатолий Анатольев - Карьерный путь
+block css
+	link(rel="stylesheet", href="css/career.css")
+block main
+	main.main
+		h1.main__header
+			| Карьерный путь
+		section.main__content
+			.picture
+				img(
+				class="picture__image"
+				src="img/sample_low.jpg"
+				alt="Sample")
+			arcticle.experience
+				.post
+					span.post__year
+						| 2016
+					.post__circle
+					.post__content
+						p.post__title
+							| "Weblime"
+						span.post__text
+							| Старший разработчик
+						span.post__text
+							| 2015 - по настоящее время
+				.post
+					span.post__year
+						| 2015
+					.post__circle
+					.post__content
+						p.post__title
+							| "Weblime"
+						span.post__text
+							| Средний разработчик
+						span.post__text
+							| 2013 - 2015			
+				.post
+					span.post__year
+						| 2013
+					.post__circle
+					.post__content
+						p.post__title
+							| "Weblime"
+						span.post__text
+							| Младший разработчик
+						span.post__text
+							| 2012 - 2013
+				.post
+					span.post__year
+						| 2012
+					.post__circle
+					.post__content
+						p.post__title
+							| "Weblime"
+						span.post__text
+							| Стажер
+						span.post__text
+							| 2011 - 2012			

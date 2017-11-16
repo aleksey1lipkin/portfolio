@@ -1,0 +1,63 @@
+extends about.jade
+block meta
+	meta(
+	name="description"
+	content="Анатолий Анатольев визитка, html/css разработчик, примеры работ")
+	meta(
+	name="keywords"
+	content="Анатолий, Анатольев, портфолио, проекты")
+block title
+	title Анатолий Анатольев - Примеры работ
+block css
+	link(rel="stylesheet", href="css/portfolio.css")
+block main
+	main.main
+		h1.main__header
+			| Портфолио
+		article.portfolio
+			.card
+				.card__example.card__example_app
+				section.content
+					h2.content__title
+						| Deals App
+					p.content__text
+						| Продажа одежды
+					p.content__about.content__about_phone
+						| Приложение
+			.card
+				.card__example.card__example_scapes
+				section.content
+					h2.content__title
+						| Dream-scapes
+					p.content__text
+						| Лагуна Люфтганза
+					p.content__about.content__about_screen
+						| Лендинг
+			.card
+				.card__example.card__example_creative
+				section.content
+					h2.content__title
+						| Creative studio
+					p.content__text
+						| Танцевальная студия
+					p.content__about.content__about_screen
+						| Корпоративный сайт
+			.card
+				.card__example.card__example_frog
+				section.content
+					h2.content__title
+						| Studio frog
+					p.content__text
+						| Мебельный магазин
+					p.content__about.content__about_screen
+						| Лендинг
+			.card
+				.card__example.card__example_carbonara
+				section.content
+					h2.content__title
+						| Carbonara
+					p.content__text
+						| Итальянский ресторан
+					p.content__about.content__about_screen
+						| Лендинг
+

@@ -1,0 +1,40 @@
+- var aboutMe = 'Меня зовут Анатолий(Гослинг) Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vel, at, ullam! Odit quasi asperiores, optio officia laborum tempore doloremque. Dicta recusandae hic reiciendis tempora ullam, earum aut. Nulla culpa dolorem dolor inventore aspernatur minima voluptatibus voluptates saepe non enim consequatur id aut qui quaerat nobis voluptas dicta reprehenderit, asperiores, autem similique accusamus possimus provident. Quidem cumque quos quae animi sint pariatur maxime, eveniet non, magni sequi adipisci officiis labore mollitia nemo explicabo, illum quas debitis ut. Ab expedita suscipit amet, numquam nesciunt. Autem voluptatum esse voluptatem! Vitae explicabo quos iure facilis maxime voluptatibus, necessitatibus, voluptatum libero cupiditate ullam beatae delectus.'
+doctype html
+html(lang="en")
+	head
+		meta(charset="UTF-8")
+		meta(
+		name="viewport"
+		content="width=device-width, initial-scale=1.0")
+		block meta
+			meta(
+			name="description"
+			content="Анатолий Анатольев визитка, html/css разработчик. Карьерный путь, скачать резюме")
+			meta(
+			name="keywords"
+			content="Анатолий, Анатольев, резюме, карьера")
+		block title
+			title Анатолий Анатольев, информация о себе
+		link(rel="stylesheet", href="css/custom.css")
+		block css
+			link(rel="stylesheet", href="css/about.css")
+	body
+		.wrapper
+			include ../layout/header
+			.container
+				include ../layout/nav
+				block main
+					main.main
+						.portrait
+							img(
+							class="portrait__image"
+							src="img/big_avatar_low.jpg"
+							alt="Photo")
+						section.main__info
+							h1.main__header
+								| Обо мне
+							p.main__text
+								| #{aboutMe} #{aboutMe}
+							button(title="Download summary").main__button
+								| Скачать резюме
+			include ../layout/footer 
