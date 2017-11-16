@@ -127,11 +127,6 @@ $red: #e85f61;
 .post:hover .post__circle {
     box-shadow: 0 0 0 5px #94e0f2;
 }
-//change active link to this page
-.nav__link_active::before {
-    background-position: -0px -225px;
-}
-
 @media screen and (max-width: 900px) {
     .main {
         width: 100%;

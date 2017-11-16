@@ -1,4 +1,5 @@
 - var aboutMe = 'Меня зовут Анатолий(Гослинг) Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vel, at, ullam! Odit quasi asperiores, optio officia laborum tempore doloremque. Dicta recusandae hic reiciendis tempora ullam, earum aut. Nulla culpa dolorem dolor inventore aspernatur minima voluptatibus voluptates saepe non enim consequatur id aut qui quaerat nobis voluptas dicta reprehenderit, asperiores, autem similique accusamus possimus provident. Quidem cumque quos quae animi sint pariatur maxime, eveniet non, magni sequi adipisci officiis labore mollitia nemo explicabo, illum quas debitis ut. Ab expedita suscipit amet, numquam nesciunt. Autem voluptatum esse voluptatem! Vitae explicabo quos iure facilis maxime voluptatibus, necessitatibus, voluptatum libero cupiditate ullam beatae delectus.'
+- var wrapperClass = 'wrapper-about';
 doctype html
 html(lang="en")
 	head
@@ -18,8 +19,9 @@ html(lang="en")
 		link(rel="stylesheet", href="css/custom.css")
 		block css
 			link(rel="stylesheet", href="css/about.css")
+	block vars
 	body
-		.wrapper
+		div(class="wrapper #{wrapperClass}")
 			include ../layout/header
 			.container
 				include ../layout/nav

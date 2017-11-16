@@ -109,10 +109,6 @@ $aboutBefore: phone, screen;
 		}
 	}
 }
-//change active link to this page
-.nav__link_active::before {
-    background-position: -0px -195px;
-}
 @media screen and (max-width: 900px) {
 	.main {
 		width: 100%;

@@ -138,9 +138,6 @@
 .post:hover .post__circle {
   box-shadow: 0 0 0 5px #94e0f2; }
 
-.nav__link_active::before {
-  background-position: -0px -225px; }
-
 @media screen and (max-width: 900px) {
   .main {
     width: 100%; }

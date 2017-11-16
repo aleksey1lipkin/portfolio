@@ -129,9 +129,6 @@
 .content__about_screen::before {
   content: "\f108"; }
 
-.nav__link_active::before {
-  background-position: -0px -195px; }
-
 @media screen and (max-width: 900px) {
   .main {
     width: 100%; } }
