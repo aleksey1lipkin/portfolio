@@ -69,6 +69,10 @@ table {
   font-family: "Fira Sans Bold";
   src: url("../fonts/FiraSans-Bold.woff"); }
 
+@font-face {
+  font-family: "Font Awesome";
+  src: url("../fonts/fontawesome-webfont.woff"); }
+
 * {
   box-sizing: border-box; }
 
