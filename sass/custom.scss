@@ -7,13 +7,13 @@ $blue: #33c1e3;
 $red: #e85f61;
 
 
-@import "misc/reset.scss";
-@import "misc/fonts.scss";
-@import "misc/adjustment.scss";
-@import "misc/mixins.scss";
+@import "misc/_reset.scss";
+@import "misc/_fonts.scss";
+@import "misc/_adjustment.scss";
+@import "misc/_mixins.scss";
 
-@import "sections/header.scss";
-@import "sections/nav.scss";
-@import "sections/footer.scss";
+@import "sections/_header.scss";
+@import "sections/_nav.scss";
+@import "sections/_footer.scss";
 
 

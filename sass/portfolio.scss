@@ -30,18 +30,22 @@ $red: #e85f61;
     margin-bottom: 20px;
 }
 .portfolio {
+	width: 100%;
+	padding-left: 5px;
+}
+.portfolio__list {
 	display: flex;
 	flex-flow: row wrap;
 	justify-content: space-between;
-	width: 100%;
-	padding-left: 5px;
 	&:after {
     	content: "";
     	width: 31.428%;
     }
 }
-.card {
+.portfolio__item {
 	width: 31.429%;
+}
+.card {
 	cursor: pointer;
 }
 .card:hover {
@@ -115,7 +119,7 @@ $aboutBefore: phone, screen;
 	}
 }
 @media screen and (max-width: 625px) {
-	.card {
+	.portfolio__item {
 		width: 100%;
 	}
 }

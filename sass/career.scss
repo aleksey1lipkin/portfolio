@@ -4,30 +4,30 @@ $grey: #f6f6f6;
 $blue: #33c1e3;
 $red: #e85f61;
 
-@import "misc/fonts.scss";
+@import 'misc/fonts.scss';
 
 .wrapper {
-	min-height: 100%;
     display: flex;
     flex-direction: column;
+    min-height: 100%;
 }
 .container {
-	flex: 1 0 auto;
-	flex-flow: row wrap;
-	display: flex;
+    display: flex;
+    width: 100%;
     max-width: 940px;
     margin: 0 auto;
-    width: 100%;
+    flex: 1 0 auto;
+    flex-flow: row wrap;
 }
 .main {
     width: 75%;
 }
 .main__header {
     font-size: 35px;
-    @include firaSans(medium);
     line-height: 1.286;
-    padding-left: 3px;
     margin-bottom: 23px;
+    padding-left: 3px;
+    @include firaSans(medium);
 }
 .main__content {
     display: flex;
@@ -36,105 +36,117 @@ $red: #e85f61;
     justify-content: space-between;
 }
 .picture {
+    overflow: hidden;
     width: 220px;
     height: 220px;
+    margin-bottom: 20px;
+    margin-left: 5px;
     border-radius: 9px;
     background-color: $grey;
-    overflow: hidden;
-    margin-left: 5px;
-    margin-bottom: 20px;
-    &__image {
+    &__image
+    {
         // width: 100%;
     }
 }
 .experience {
     width: 65%;
+}
+.experience__list {
     display: flex;
-    flex-flow: column;
+    flex-direction: column;
+    align-items: flex-end;
+}
+.experience__item {
+    width: 82.6%;
 }
 .post {
     position: relative;
     display: flex;
-    flex-flow: row nowrap;
-    justify-content: space-between;
-    width: 100%;
-    margin-bottom: 21px;
-    cursor: pointer;
+    flex-direction: column;
+    margin-bottom: 20px;
+    padding-left: 19px;
+    transition: all .3s ease-in;
+    color: $lightBlack;
+    border-radius: 10px;
+    background-color: #fff;
+    box-shadow: 0 1px 3px 0 rgba(0, 0, 0, .2);
+}
+.post::before {
+    position: absolute;
+    display: block;
+    top: 50%;
+    left: -22px;
+    width: 1px;
+    height: 120px;
+    content: "";
+    background-color: #ddd;
+}
+.experience__item:last-child {
+    .post::before {
+        display: none;
+    }
 }
 .post__year {
-    align-self: center;
-    @include firaSans(light);
     font-size: 14px;
-    margin-left: 16px;
-    transition: all 0.2s ease-in;
+    position: absolute;
+    top: 50%;
+    left: -63px;
+    transition: all .3s ease-in;
+    transform: translateY(-50%);
+    @include firaSans(light);
 }
-.post__circle {
+.post__year::after {
+    position: absolute;
+    top: -3px;
+    left: 32px;
     width: 10px;
     height: 10px;
-    background-color: $blue;
+    content: '';
+    transition: all .3s ease-in;
+    border: 5px solid $grey;
     border-radius: 50%;
-    transition: all 0.2s ease-in;
-    align-self: center;
-    position: relative;
+    background-color: $blue;
 }
-.post__content {
-    display: flex;
-    flex-direction: column;
-    width: 82.6%;
-    min-height: 107px;
-    border-radius: 10px;
-    box-shadow: 0px 1px 3px 0px rgba(0, 0, 0, 0.2);
-    background-color: #fff;
-    padding-left: 19px;
-    color: $lightBlack;
-    transition: all 0.2s ease-in;
-}
-.post__circle::before {
-    content: "";
-    display: block;
-    position: absolute;
-    width: 1px;
-    height: 108px;
-    top: 15px;
-    left: 4px;
-    background-color: #dddddd;
-}
-.post:last-child {
-        .post__circle::before {
-            display: none;
-        }
+.post:hover .post__year::after {
+    border-color: #94e0f2;
+    left: 43px;
+    top: -2px;
 }
 .post__title {
-    @include firaSans(regular);
     font-size: 21px;
     padding-top: 18px;
     padding-bottom: 7px;
+    @include firaSans(regular);
 }
-.post__text {
-    @include firaSans(light);
-    font-size: 18px;
+.post__rank {
+	font-size: 18px;
     margin-bottom: 9px;
+    @include firaSans(light);
 }
-.post:hover .post__content {
-    color:#fff;
+.post__period {
+    font-size: 18px;
+    margin-bottom: 16px;
+    @include firaSans(light);
+}
+.post:hover {
+    color: #fff;
     background-color: $blue;
 }
 .post:hover .post__year {
-    color: $blue;
-    font-weight: 900;
     font-size: 17px;
-}
-.post:hover .post__circle {
-    box-shadow: 0 0 0 5px #94e0f2;
+    left: -74px;
+    font-weight: 900;
+    padding: 0;
+    color: #33c1e3;
 }
 @media screen and (max-width: 900px) {
     .main {
         width: 100%;
-            &__content {
-                flex-flow: row nowrap;
-            } 
+        &__content {
+            flex-flow: row nowrap;
+        }
     }
-    .post__content {
+    .post {
         flex-shrink: 1;
     }
 }
@@ -144,16 +156,13 @@ $red: #e85f61;
     }
     .main__content {
         flex-direction: column;
+
         align-items: center;
     }
     .experience {
         width: 100%;
     }
-    .post__circle {
-        margin: 10px;
-    }
-    .post__content {
-        width: auto;
+    .post {
         flex: 1 1 auto;
     }
 }

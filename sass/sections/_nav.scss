@@ -96,60 +96,6 @@ $navPage: about, career, portfolio;
 	}
 	}
 }
-// .wrapper-about{
-// 	.nav__link_about {
-// 	@include firaSans(bold);
-// 	color: $blue;	
-// }
-// 	.nav__link_about::before {
-// 	background-position: -0px -278px;
-// }
-// 	.nav__link_about::after {
-// 	content: "";
-// 	position: absolute;
-// 	width: 6px;
-// 	height: 44px;
-// 	background-color: $blue;
-// 	top: -11px;
-//     margin-left: 24px;
-// }
-// }
-// .wrapper-career{
-// 	.nav__link_career {
-// 	@include firaSans(bold);
-// 	color: $blue;	
-// }
-// 	.nav__link_career::before {
-// 	background-position: -0px -225px;
-// }
-// 	.nav__link_career::after {
-// 	content: "";
-// 	position: absolute;
-// 	width: 6px;
-// 	height: 44px;
-// 	background-color: $blue;
-// 	top: -11px;
-//     margin-left: 24px;
-// }
-// }
-// .wrapper-portfolio{
-// 	.nav__link_portfolio {
-// 	@include firaSans(bold);
-// 	color: $blue;	
-// }
-// 	.nav__link_portfolio::before {
-// 	background-position: -0px -195px;
-// }
-// 	.nav__link_portfolio::after {
-// 	content: "";
-// 	position: absolute;
-// 	width: 6px;
-// 	height: 44px;
-// 	background-color: $blue;
-// 	top: -11px;
-//     margin-left: 24px;
-// }
-// }
 
 @media screen and (max-width: 900px) {
 	.nav, .nav__list {

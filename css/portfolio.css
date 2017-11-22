@@ -50,17 +50,21 @@
   margin-bottom: 20px; }
 
 .portfolio {
-  display: flex;
-  flex-flow: row wrap;
-  justify-content: space-between;
   width: 100%;
   padding-left: 5px; }
-  .portfolio:after {
+
+.portfolio__list {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-between; }
+  .portfolio__list:after {
     content: "";
     width: 31.428%; }
 
+.portfolio__item {
+  width: 31.429%; }
+
 .card {
-  width: 31.429%;
   cursor: pointer; }
 
 .card:hover .content__title {
@@ -138,5 +142,5 @@
     width: 100%; } }
 
 @media screen and (max-width: 625px) {
-  .card {
+  .portfolio__item {
     width: 100%; } }

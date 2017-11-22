@@ -23,47 +23,44 @@ block main
 				src="img/sample_low.jpg"
 				alt="Sample")
 			arcticle.experience
-				.post
-					span.post__year
-						| 2016
-					.post__circle
-					.post__content
-						p.post__title
-							| "Weblime"
-						span.post__text
-							| Старший разработчик
-						span.post__text
-							| 2015 - по настоящее время
-				.post
-					span.post__year
-						| 2015
-					.post__circle
-					.post__content
-						p.post__title
-							| "Weblime"
-						span.post__text
-							| Средний разработчик
-						span.post__text
-							| 2013 - 2015			
-				.post
-					span.post__year
-						| 2013
-					.post__circle
-					.post__content
-						p.post__title
-							| "Weblime"
-						span.post__text
-							| Младший разработчик
-						span.post__text
-							| 2012 - 2013
-				.post
-					span.post__year
-						| 2012
-					.post__circle
-					.post__content
-						p.post__title
-							| "Weblime"
-						span.post__text
-							| Стажер
-						span.post__text
-							| 2011 - 2012			
+				ul.experience__list
+					li.experience__item
+						.post
+							p.post__title
+								| "Weblime"
+							span.post__rank
+								| Старший разработчик
+							span.post__period
+								| 2015 - по настоящее время
+							span.post__year
+								| 2016
+					li.experience__item
+						.post
+							p.post__title
+								| "Weblime"
+							span.post__rank
+								| Средний разработчик
+							span.post__period
+								| 2013 - 2015
+							span.post__year
+								| 2015
+					li.experience__item
+						.post
+							p.post__title
+								| "Weblime"
+							span.post__rank
+								| Младший разработчик
+							span.post__period
+								| 2012 - 2013
+							span.post__year
+								| 2013
+					li.experience__item			
+						.post
+							p.post__title
+								| "Weblime"
+							span.post__rank
+								| Стажер
+							span.post__period
+								| 2011 - 2012
+							span.post__year
+								| 2012

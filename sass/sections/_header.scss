@@ -91,8 +91,17 @@
 	color: $red;
 	border-color: $red;
 }
+.communications::after {
+    content: "";
+    position: absolute;
+    display: block;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    height: 20px;
+}
 .contacts__list {
-	
+
 }
 .contacts__item {
 	margin-bottom: 16px;
