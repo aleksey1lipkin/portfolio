@@ -96,7 +96,7 @@ $examples: app, scapes, creative, frog, carbonara;
 	@include firaSans(medium);
 	font-size: 14px;
 	color: rgb(174, 174, 174);
-	padding-bottom: 17px;
+	padding-bottom: 16px;
 }
 .content__about::before {
 	font-family: "Font Awesome";
@@ -113,13 +113,82 @@ $aboutBefore: phone, screen;
 		}
 	}
 }
-@media screen and (max-width: 900px) {
+@media screen and (max-width: 768px) {
+	.nav {
+		margin-bottom: 21px;
+	}
+	.container {
+		flex-direction: column;
+	}
 	.main {
 		width: 100%;
+		padding-left: 15px;
+		padding-right: 24px;
+   		margin-top: -5px;
+	}
+	.card__example {
+		height: 178px
+	}
+	.content__about {
+		padding-bottom: 20px;
 	}
 }
-@media screen and (max-width: 625px) {
+@media screen and (max-width: 576px) {
+	.nav {
+		margin-bottom: 36px;
+	}
+	.main {
+		padding-left: 0;
+    	padding-right: 0;
+	}
+	.main__header {
+		text-align: center;
+	}
+	.container {
+        max-width: 300px;
+        align-self: center;
+    }
+    .portfolio {
+    	padding-left: 0;
+    }
 	.portfolio__item {
 		width: 100%;
+	}
+	.portfolio__item:first-child {
+		.content {
+		padding-left: 17px;
+    	padding-top: 14px;
+    	margin-bottom: 22px;
+    		&__text{
+    			margin-bottom: 14px;
+    		}
+    			&__about {
+    				padding-bottom: 17px;
+    			}
+		}
+	}
+	.content {
+		padding-left: 16px;
+    	padding-top: 25px;
+    	border-radius: 0 0 14px 14px;
+	}
+	.card__example {
+		height: 234px;
+		border-radius: 14px 14px 0 0;
+	}
+	
+	.content__title {
+		font-size: 24px;
+		margin-bottom: 3px;
+	}
+	.content__text {
+		font-size: 16px;
+    	padding-left: 3px;
+    	margin-bottom: 16px;
+	}
+	.content__about {
+		font-size: 16px;
+    	padding-left: 5px;
+    	padding-bottom: 18px;
 	}
 }

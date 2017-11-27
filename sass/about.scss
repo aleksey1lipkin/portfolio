@@ -13,12 +13,11 @@ $red: #e85f61;
 }
 .container {
 	flex: 1 0 auto;
-	flex-flow: row wrap;
-	display: flex;
+    flex-flow: row wrap;
+    display: flex;
     max-width: 940px;
     margin: 0 auto;
     width: 100%;
-    justify-content: space-between;
 }
 
 /*MAIN__START*/
@@ -37,10 +36,10 @@ $red: #e85f61;
 }
 .main {
 	width: 75%;
-    max-width: 665px;
     display: flex;
     flex-flow: row wrap;
     justify-content: space-between;
+    padding-left: 40px;
 }
 .main__info {
 	display: flex;
@@ -57,12 +56,13 @@ $red: #e85f61;
 .main__text {
 	@include firaSans(light);
 	font-size: 18px;
-    line-height: 26px;
+	line-height: 26px;
     max-width: 380px;
     max-height: 286px;
     margin-bottom: 58px;
     overflow: scroll;
     overflow-x: hidden;
+    padding-left: 1px;
 }
 
 .main__button {
@@ -109,19 +109,60 @@ $red: #e85f61;
 }
 /*MAIN__END*/
 
-@media screen and (max-width: 900px) {
+@media screen and (max-width: 768px) {
 	.container {
 		flex-direction: column;
 	}
 	.main {
-		padding-left: 10px;
 		width: 100%;
-		max-width: 940px;
-		justify-content: space-around;
+    	max-width: 720px;
+    	justify-content: space-around;
+    	padding: 0;
+	}
+	.portrait {
+		width: 175px;
+		height: 175px;
+		margin-left: 23px;
+	}
+	.main__header {
+		margin-bottom: 13px;
+	}
+	.main__text {
+		max-width: 430px;
+		max-height: 364px;
+	}
+	.main__button {
+		margin-right: 13px;
 	}
 }
-@media screen and (max-width: 625px) {
+@media screen and (max-width: 576px) {
+	.container {
+		max-width: 300px;
+    	align-self: center;
+	}
+	.portrait {
+		width: 150px;
+		height: 150px;
+		margin-left: 0;
+		margin-bottom: 5px;
+	}
+	.main__info {
+		align-items: center;
+	}
+	.main__text {
+		font-size: 16px;
+		line-height: 1.5;
+		max-height: 405px;
+		margin-bottom: 40px;
+		padding-left: 0;
+	}
+	.main__header {
+		margin-bottom: 4px;
+	}
 	.main__button {
 		align-self: center;
+		margin-right: 0;
+		margin-bottom: 30px;
 	}
 }
+

@@ -1,9 +1,8 @@
 
 .nav {
 	width: 25%;
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
+    padding-right: 44px;
+
 }
 .nav__list {
 	margin-top: 16px;
@@ -12,7 +11,7 @@
     align-items: flex-end;
 }
 .nav__item {
-	padding-left: 53px;
+
 }
 
 .nav__link {
@@ -97,22 +96,40 @@ $navPage: about, career, portfolio;
 	}
 }
 
-@media screen and (max-width: 900px) {
-	.nav, .nav__list {
+@media screen and (max-width: 768px) {
+	.nav {
+		width: 100%;
+		padding-left: 44px;
+		margin-bottom: 36px;
+	}
+	.nav__link {
+		margin-bottom: 0;
+	}
+	.nav__list {
 		width: 100%;
 		flex-flow: row wrap;
+		margin-top: 6px;
 	}
-	.nav__item {
-		flex: 1 0 auto;
+	.nav__item  {
+		margin-right: 54px;
+	}
+	.nav__link::after {
+		display: none;
 	}
 }
 
-@media screen and (max-width: 550px) {
-	.nav, .nav__list {
-		flex-flow: column;
-		align-items: center;
+@media screen and (max-width: 576px) {
+	.nav {
+		padding: 0;
+		margin-bottom: 17px;
 	}
 	.nav__item {
-		padding-left: 0;
+		margin-right: 18px;
+	}
+	.nav__link {
+		font-size: 14px;
+	}
+	.nav__link::before {
+		display: none;
 	}
 }

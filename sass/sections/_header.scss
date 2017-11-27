@@ -11,8 +11,7 @@
     max-width: 940px;
     margin: 0 auto;
     align-items: center;
-    padding-top: 10px;
-    padding-bottom: 9px;
+    min-height: 79px;
 }
 
 .avatar {
@@ -34,15 +33,15 @@
     font-size: 18px;
     margin-left: 19px;
     color: $lightBlack;
-    line-height: 1.556;
-    margin-top: 2px;
+    line-height: 1.5;
+    margin-top: 4px;
 }
 .communications {
 	margin-left: auto;
     position: relative;
 }
 .contacts {
-    margin-top: 1px;
+    margin-top: 3px;
 }
 .contacts__switcher {
 	@include firaSans(bold);
@@ -91,6 +90,23 @@
 	color: $red;
 	border-color: $red;
 }
+.contacts-mobile__link {
+    text-decoration: none;
+    display: none;
+}
+.contacts-mobile__link::after {
+    content: '\f095';
+    font-family: "Font Awesome";
+    font-size: 39px;
+    color: $blue;
+    cursor: pointer;
+}
+.contacts-mobile:hover {
+    .contacts-mobile__link::after {
+        color: $red;
+    }
+}
+
 .communications::after {
     content: "";
     position: absolute;
@@ -147,14 +163,42 @@ $linkBackground: mail, phone, skype;
     }
 }
 
-@media screen and (max-width: 400px) {
-    .header__body {
-        flex-flow: column;
+@media screen and (max-width: 768px) {
+    .avatar {
+        margin-left: 21px;
     }
-    .communications {
-        margin-left: 0;
+    .contacts__switcher {
+        margin-right: 20px;
+    }
+    .contacts-wrapper {
+        padding-right: 2px;
+        padding-left: 30px;
+        left: -22px;
+    }
+    .contacts-list__link {
+        font-size: 16px;
+    }
+    
+}
+@media screen and (max-width: 576px) {
+    .header {
+        margin-bottom: 11px;
     }
     .header__title {
-        margin-left: 0;
+        font-size: 14px;
+        margin-top: 0px;
+        width: 70px;
+    }
+    .avatar {
+        margin-left: 10px;
+    }
+    .communications {
+        margin-right: 11px;
+    }
+    .contacts, .contacts-wrapper {
+        display: none;
+    }
+    .contacts-mobile__link {
+        display: block;
     }
 }
