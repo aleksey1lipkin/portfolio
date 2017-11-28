@@ -59,7 +59,7 @@ $red: #e85f61;
 	line-height: 26px;
     max-width: 380px;
     max-height: 286px;
-    margin-bottom: 58px;
+    margin-bottom: 59px;
     overflow: scroll;
     overflow-x: hidden;
     padding-left: 1px;
@@ -80,22 +80,20 @@ $red: #e85f61;
     outline: none;
     cursor: pointer;
 }
-.main__button::before {
-	content: "";
+.button-icon {
 	display: inline-block;
-	height: 14px;
 	width: 14px;
+	height: 14px;
 	margin-right: 8px;
-	background: url('../img/sprite.png') -17px -239px no-repeat;
-	transition-delay: 0.1s;
+	fill: $red;
+	transition: all 0.2s ease-in;
 }
 .main__button:hover {
 	color: #fff;
 	background-color: $red;
-}
-.main__button:hover.main__button::before {
-	content: "";
-	background: url('../img/sprite.png') -17px -225px no-repeat;
+	.button-icon {
+		fill: #fff;
+	}
 }
 
 //change scroll bar

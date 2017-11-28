@@ -58,7 +58,7 @@
     top: 36px;
     left: -37px;
     border: 1px solid #dedede;
-    padding-right: 8px;
+    padding-right: 11px;
     padding-top: 9px;
     padding-left: 46px;
     border-radius: 10px;
@@ -94,13 +94,12 @@
     text-decoration: none;
     display: none;
 }
-.contacts-mobile__link::after {
-    content: '\f095';
-    font-family: "Font Awesome";
-    font-size: 39px;
-    color: $blue;
-    cursor: pointer;
+.contacts-mobile__icon {
+    width: 31px;
+    height: 31px;
+    fill: $blue;
 }
+
 .contacts-mobile:hover {
     .contacts-mobile__link::after {
         color: $red;
@@ -134,33 +133,20 @@
     text-decoration: none;
     color: $black;
 }
-.contacts-list__link::before {
-	content: "";
-	position: absolute;
-	left: -26px;
+.contacts__icon {
+    width: 18px;
+    height: 18px;
+    position: absolute;
+    left: -29px;
     top: 4px;
-	background: url('../img/sprite.png') no-repeat;
-	display: inline-block;
+    fill: $blue;
 }
-
-$linkBackground: mail, phone, skype;
-@each $type in $linkBackground {
-    .contacts-list__link_#{$type}::before {
-        @if $type == mail {
-            background-position: 0px -180px;
-            top: 6px;
-            width: 19px;
-            height: 15px;
-        } @else if $type == phone {
-            background-position: -16px -261px;
-            width: 15px;
-            height: 16px;
-        } @else if $type == skype {
-            background-position: 0px -261px;
-            width: 16px;
-            height: 17px;
-        }
-    }
+.contacts-list__link::before {
+    content: "";
+    position: absolute;
+    height: 100%;
+    width: 20px;
+    left: -15px;
 }
 
 @media screen and (max-width: 768px) {

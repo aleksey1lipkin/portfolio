@@ -35,7 +35,7 @@ $red: #e85f61;
     flex-flow: row nowrap;
     justify-content: space-between;
 }
-.picture {
+.sample {
     overflow: hidden;
     width: 220px;
     height: 220px;
@@ -43,8 +43,7 @@ $red: #e85f61;
     margin-left: 5px;
     border-radius: 9px;
     background-color: $grey;
-    &__image
-    {
+    &__image {
         // width: 100%;
     }
 }

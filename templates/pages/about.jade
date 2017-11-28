@@ -38,5 +38,9 @@ html(lang="en")
 							p.main__text
 								| #{aboutMe} #{aboutMe}
 							button(title="Download summary").main__button
+								svg(
+								class="button-icon")
+									use(
+									xlink:href="img/svg/sprite.svg#download")
 								| Скачать резюме
 			include ../layout/footer

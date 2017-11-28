@@ -8,6 +8,10 @@ footer.footer
 				each val, key in footerLinks
 					li.footer__item
 						a(
-						class="footer__link footer__link_#{key}"
+						class="footer__link"
 						href=val
 						title=key)
+							svg(
+							class="footer__icon footer__icon_#{key}")
+								use(
+								xlink:href="img/svg/sprite.svg##{key}")

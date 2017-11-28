@@ -15,6 +15,10 @@ header.header
 				href="tel:+79873456212"
 				title="phone"
 				class="contacts-mobile__link")
+					svg(
+					class="contacts-mobile__icon")
+						use(
+						xlink:href="img/svg/sprite.svg#phone")
 			.contacts-wrapper
 				ul.contacts__list
 					li.contacts__item
@@ -23,15 +27,27 @@ header.header
 						title="mail"
 						class="contacts-list__link contacts-list__link_mail")
 							| anatoly@mail.ru
+							svg(
+							class="contacts__icon contacts__icon_mail")
+								use(
+								xlink:href="img/svg/sprite.svg#envelope")
 					li.contacts__item
 						a(
 						href="tel:+79873456212"
 						title="phone"
 						class="contacts-list__link contacts-list__link_phone")
 							| +7 987 345 62 12
+							svg(
+							class="contacts__icon contacts__icon_phone")
+								use(
+								xlink:href="img/svg/sprite.svg#phone")
 					li.contacts__item
 						a(
 						href="skype:anatoly_?call"
 						title="skype"
 						class="contacts-list__link contacts-list__link_skype")
 							| anatoly_
+							svg(
+							class="contacts__icon contacts__icon_skype")
+								use(
+								xlink:href="img/svg/sprite.svg#skype")

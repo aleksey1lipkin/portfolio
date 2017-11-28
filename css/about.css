@@ -76,7 +76,7 @@
   line-height: 26px;
   max-width: 380px;
   max-height: 286px;
-  margin-bottom: 58px;
+  margin-bottom: 59px;
   overflow: scroll;
   overflow-x: hidden;
   padding-left: 1px; }
@@ -96,22 +96,19 @@
   outline: none;
   cursor: pointer; }
 
-.main__button::before {
-  content: "";
+.button-icon {
   display: inline-block;
-  height: 14px;
   width: 14px;
+  height: 14px;
   margin-right: 8px;
-  background: url("../img/sprite.png") -17px -239px no-repeat;
-  transition-delay: 0.1s; }
+  fill: #e85f61;
+  transition: all 0.2s ease-in; }
 
 .main__button:hover {
   color: #fff;
   background-color: #e85f61; }
-
-.main__button:hover.main__button::before {
-  content: "";
-  background: url("../img/sprite.png") -17px -225px no-repeat; }
+  .main__button:hover .button-icon {
+    fill: #fff; }
 
 .main__text::-webkit-scrollbar {
   width: 5px; }

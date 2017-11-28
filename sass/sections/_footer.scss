@@ -35,33 +35,21 @@
 .footer__item {
 	margin-left: 7px;
 }
-.footer__link {
-	display: block;
+.footer__icon {
 	width: 31px;
 	height: 30px;
-	background: url('../img/sprite.png');
+	fill: #9c9c9c;
+	transition: all .1s ease-in;
 }
-$footerLink: vk, twitter, facebook;
-	@each $type in $footerLink {
-		.footer__link_#{$type} {
-			@if $type == vk {
-				background-position: 0 -150px;
-					&:hover {
-						background-position: 0 -120px;
-					}
-			} @else if $type == twitter {
-				background-position: 0 -90px;
-					&:hover {
-						background-position: 0 -60px;
-					}
-			} @else if $type == facebook {
-				background-position: 0 -30px;
-					&:hover {
-						background-position: 0 0;
-					}
-			}
-		}
-	}
+.footer__icon_facebook:hover {
+	fill: #4462a8;
+}
+.footer__icon_vk:hover {
+	fill: #5e99c3;
+}
+.footer__icon_twitter:hover {
+	fill: #69c4d9;
+}
 @media screen and (max-width: 768px) {
     .footer__info {
         margin-left: 19px;

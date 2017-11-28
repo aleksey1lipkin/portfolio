@@ -11,7 +11,7 @@
     align-items: flex-end;
 }
 .nav__item {
-
+	position: relative;
 }
 
 .nav__link {
@@ -23,51 +23,39 @@
 	line-height: 1.333;
 	color: $lightBlack;
 	margin-bottom: 21px;
-}
-.nav__link:hover {
-	color: $blue;
+	transition: all 0.1s ease-in;
 }
 .nav__link::before {
 	content: "";
-	position: absolute;
-	left: -25px;
-	width: 16px;
-	height: 18px;
-	background: url('../img/sprite.png') no-repeat;
+    position: absolute;
+    display: block;
+    width: 26px;
+    height: 100%;
+    left: -15px;
 }
-
-.nav__link_about::before {
-	background-position: -0px -296px;	
+.nav__icon {
+	width: 19px;
+    height: 18px;
+    position: absolute;
+    left: -25px;
+    top: 0;
+    fill: $black;
+    transition: all 0.1s ease-in;
 }
-.nav__link_career::before {
-	width: 17px;
-	height: 18px;
-	top: 2px;
-	background-position: -0px -243px;
+.nav__icon_portfolio {
+	left: -28px;
 }
-.nav__link_portfolio::before {
-	width: 18px;
-	height: 15px;
-	left: -27px;
-    top: 2px;
-	background-position: -0px -210px;
+.nav__icon_career {
+	top: 1px;
 }
-
-$navLink: about, career, portfolio;
-@each $type in $navLink {
-	.nav__link:hover {
-		&.nav__link_#{$type}::before {
-			@if $type == about {
-				background-position: -0px -278px;
-			} @else if $type == career {
-				background-position: -0px -225px;
-				} @else if $type == portfolio {
-				background-position: -0px -195px;	
-			}
-		}
+.nav__item:hover {
+	.nav__icon {
+		fill: $blue;
 	}
+	.nav__link {
+	color: $blue;
 }
-//highlight active tab
+}
 $navPage: about, career, portfolio;
 @each $type in $navPage {
 	.wrapper-#{$type} {
@@ -78,24 +66,18 @@ $navPage: about, career, portfolio;
 		.nav__link_#{$type}::after {
 			content: "";
 			position: absolute;
+			left: 100%;
 			width: 6px;
 			height: 44px;
 			background-color: $blue;
 			top: -11px;
     		margin-left: 24px;
 		}
-		.nav__link_#{$type}::before {
-			@if $type == about {
-				background-position: -0px -278px;
-		}	@else if $type == career {
-				background-position: -0px -225px;
-		}	@else if $type == portfolio {
-				background-position: -0px -195px;
+		.nav__icon_#{$type} {
+			fill: $blue;
 		}
 	}
-	}
 }
-
 @media screen and (max-width: 768px) {
 	.nav {
 		width: 100%;
@@ -129,7 +111,7 @@ $navPage: about, career, portfolio;
 	.nav__link {
 		font-size: 14px;
 	}
-	.nav__link::before {
+	.nav__icon {
 		display: none;
 	}
 }
