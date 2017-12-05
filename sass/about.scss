@@ -6,22 +6,16 @@ $red: #e85f61;
 
 @import "misc/fonts.scss";
 
-.wrapper {
-	min-height: 100%;
-    display: flex;
-    flex-direction: column;
-}
-.container {
+.main-wrapper {
 	flex: 1 0 auto;
-    flex-flow: row wrap;
-    display: flex;
-    max-width: 940px;
-    margin: 0 auto;
-    width: 100%;
 }
-
 /*MAIN__START*/
-
+.portrait-wrapper {
+	width: 44.44444%;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
 .portrait {
 	width: 230px;
 	height: 230px;
@@ -29,54 +23,67 @@ $red: #e85f61;
 	border-radius: 50%;
 	background-color: $grey;
 	overflow: hidden;
-	margin-top: 4px;
 }
+
 .portrait__image {
 	width: 100%;
 }
 .main {
 	width: 75%;
     display: flex;
-    flex-flow: row wrap;
-    justify-content: space-between;
-    padding-left: 40px;
+    flex-flow: row nowrap;
 }
-.main__info {
+.info {
+    width: 55.55555%;
+}
+.biography {
 	display: flex;
-    flex-flow: column wrap;
-    align-items: flex-start;
-}
+    flex-direction: column;
 
-.main__header {
+}
+.biography__title {
 	@include firaSans(medium);
 	font-size: 35px;
     line-height: 1.286;
     margin-bottom: 15px;
+    padding-left: 10px;
 }
-.main__text {
+.biography__text {
 	@include firaSans(light);
 	font-size: 18px;
-	line-height: 26px;
+	line-height: 1.4445;
     max-width: 380px;
     max-height: 286px;
-    margin-bottom: 59px;
+    margin-bottom: 57px;
     overflow: scroll;
     overflow-x: hidden;
-    padding-left: 1px;
+    padding-left: 12px;
 }
+//change scroll bar
 
+.biography__text::-webkit-scrollbar {
+    width: 5px;
+} 
+.biography__text::-webkit-scrollbar-thumb {
+    box-shadow: inset 0 0 0 5px rgb(216, 216, 216);
+    border-radius: 10px;
+}
+.button-wrapper {
+	display: flex;
+	flex-direction: row;
+	justify-content: flex-end;
+}
 .main__button {
 	font-size: 14px;
 	@include openSans(bold);
     line-height: 2;
-    align-self: flex-end;
     color: $red;
     border: 2px solid $red;
     border-radius: 20px;
     background-color: $grey;
     padding: 4px 13px;
     transition: all 0.2s ease-in;
-    margin-bottom: 106px;
+    margin-bottom: 105px;
     outline: none;
     cursor: pointer;
 }
@@ -96,36 +103,30 @@ $red: #e85f61;
 	}
 }
 
-//change scroll bar
-
-.main__text::-webkit-scrollbar {
-    width: 5px;
-} 
-.main__text::-webkit-scrollbar-thumb {
-    box-shadow: inset 0 0 0 5px rgb(216, 216, 216);
-    border-radius: 10px;
-}
 /*MAIN__END*/
 
 @media screen and (max-width: 768px) {
-	.container {
+	.container-main {
 		flex-direction: column;
+		max-width: 728px;
+		align-self: center;
 	}
 	.main {
 		width: 100%;
-    	max-width: 720px;
-    	justify-content: space-around;
-    	padding: 0;
+	}
+	.portrait-wrapper {
+		width: 33.33333%;
+	}
+	.info {
+		width: 66.66666%;
 	}
 	.portrait {
 		width: 175px;
 		height: 175px;
-		margin-left: 23px;
 	}
-	.main__header {
-		margin-bottom: 13px;
+	.biography__title {
 	}
-	.main__text {
+	.biography__text {
 		max-width: 430px;
 		max-height: 364px;
 	}
@@ -134,28 +135,40 @@ $red: #e85f61;
 	}
 }
 @media screen and (max-width: 576px) {
-	.container {
+	.container-main {
 		max-width: 300px;
-    	align-self: center;
+	}
+	.main {
+		flex-direction: column;
+		align-items: center;
+	}
+	.portrait-wrapper {
+		width: 100%;
 	}
 	.portrait {
 		width: 150px;
 		height: 150px;
-		margin-left: 0;
-		margin-bottom: 5px;
+		margin-bottom: 6px;
 	}
-	.main__info {
+	.info {
+		width: 100%;
+	}
+	.biography {
 		align-items: center;
 	}
-	.main__text {
+	.biography__text {
 		font-size: 16px;
 		line-height: 1.5;
 		max-height: 405px;
-		margin-bottom: 40px;
+		margin-bottom: 39px;
 		padding-left: 0;
 	}
-	.main__header {
+	.biography__title {
+		padding: 0;
 		margin-bottom: 4px;
+	}
+	.button-wrapper {
+		justify-content: center;
 	}
 	.main__button {
 		align-self: center;

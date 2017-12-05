@@ -4,18 +4,17 @@
     background-color: $black;
     color: $lightBlack;
 }
-.footer__body {
-	width: 100%;
-    max-width: 940px;
-    min-height: 50px;
-    margin: auto;
-    display: flex;
-    flex-flow: row wrap;
-    align-items: center;
+.container-footer {
+	min-height: 50px;
+	align-items: center;
 }
-.footer__info {
+.secret {
+	display: flex;
+	flex-direction: row;
+}
+.secret__info {
 	display: block;
-	font-size: 	14px;
+	font-size: 14px;
 	line-height: 1.5;
 	@include firaSans(regular);
 
@@ -51,7 +50,7 @@
 	fill: #69c4d9;
 }
 @media screen and (max-width: 768px) {
-    .footer__info {
+    .secret__info {
         margin-left: 19px;
     }
     .footer__social {
@@ -60,13 +59,13 @@
 }
 
 @media screen and (max-width: 576px) {
-	.footer__body {
+	.container-footer {
 		flex-flow: column;
 		align-items: center;
 		justify-content: space-around;
 		min-height: 114px;
 	}
-	.footer__info {
+	.secret__info {
 		margin: 0;
 		width: 165px;
     	text-align: center;

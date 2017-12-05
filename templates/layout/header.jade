@@ -1,11 +1,13 @@
 header.header
-	.header__body
-		.avatar
-			img(
-			src="img/ava_low.jpg"
-			alt="photo").avatar__image
-		span.header__title
-			| Анатолий Анатольев
+	.container.container-header
+		.name
+			.avatar
+				img(
+				class="avatar__image"
+				src="img/ava_low.jpg"
+				alt="photo")
+			p.name__title
+				| Анатолий Анатольев
 		.communications
 			.contacts
 				a(href="#").contacts__switcher

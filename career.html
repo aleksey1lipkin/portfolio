@@ -12,8 +12,11 @@
   <body>
     <div class="wrapper wrapper-career">
       <header class="header">
-        <div class="header__body">
-          <div class="avatar"><img src="img/ava_low.jpg" alt="photo" class="avatar__image"></div><span class="header__title">Анатолий Анатольев</span>
+        <div class="container container-header">
+          <div class="name">
+            <div class="avatar"><img src="img/ava_low.jpg" alt="photo" class="avatar__image"></div>
+            <p class="name__title">Анатолий Анатольев</p>
+          </div>
           <div class="communications">
             <div class="contacts"><a href="#" class="contacts__switcher">Мои контакты</a></div>
             <div class="contacts-mobile"><a href="tel:+79873456212" title="phone" class="contacts-mobile__link">
@@ -39,56 +42,63 @@
           </div>
         </div>
       </header>
-      <div class="container">
-        <nav class="nav">
-          <ul class="nav__list">
-            <li class="nav__item"><a href="about.html" title="About me" class="nav__link nav__link_about">Обо мне
-                <svg class="nav__icon nav__icon_about">
-                  <use xlink:href="img/svg/sprite.svg#spy"></use>
-                </svg></a></li>
-            <li class="nav__item"><a href="career.html" title="My career" class="nav__link nav__link_career">Карьерный путь
-                <svg class="nav__icon nav__icon_career">
-                  <use xlink:href="img/svg/sprite.svg#rocket"></use>
-                </svg></a></li>
-            <li class="nav__item"><a href="portfolio.html" title="My portfolio" class="nav__link nav__link_portfolio">Портфолио
-                <svg class="nav__icon nav__icon_portfolio">
-                  <use xlink:href="img/svg/sprite.svg#briefcase"></use>
-                </svg></a></li>
-          </ul>
-        </nav>
-        <main class="main">
-          <h1 class="main__header">Карьерный путь</h1>
-          <section class="main__content">
-            <div class="sample"><img src="img/sample_low.jpg" alt="Sample" class="sample__image"></div>
-            <arcticle class="experience">
-              <ul class="experience__list">
-                <li class="experience__item">
-                  <div class="post">
-                    <p class="post__title">"Weblime"</p><span class="post__rank">Старший разработчик</span><span class="post__period">2015 - по настоящее время</span><span class="post__year">2016</span>
-                  </div>
-                </li>
-                <li class="experience__item">
-                  <div class="post">
-                    <p class="post__title">"Weblime"</p><span class="post__rank">Средний разработчик</span><span class="post__period">2013 - 2015</span><span class="post__year">2015</span>
-                  </div>
-                </li>
-                <li class="experience__item">
-                  <div class="post">
-                    <p class="post__title">"Weblime"</p><span class="post__rank">Младший разработчик</span><span class="post__period">2012 - 2013</span><span class="post__year">2013</span>
-                  </div>
-                </li>
-                <li class="experience__item">
-                  <div class="post">
-                    <p class="post__title">"Weblime"</p><span class="post__rank">Стажер</span><span class="post__period">2011 - 2012</span><span class="post__year">2012</span>
-                  </div>
-                </li>
-              </ul>
-            </arcticle>
-          </section>
-        </main>
+      <div class="main-wrapper">
+        <div class="container container-main">
+          <nav class="nav">
+            <ul class="nav__list">
+              <li class="nav__item"><a href="about.html" title="About me" class="nav__link nav__link_about">Обо мне
+                  <svg class="nav__icon nav__icon_about">
+                    <use xlink:href="img/svg/sprite.svg#spy"></use>
+                  </svg></a></li>
+              <li class="nav__item"><a href="career.html" title="My career" class="nav__link nav__link_career">Карьерный путь
+                  <svg class="nav__icon nav__icon_career">
+                    <use xlink:href="img/svg/sprite.svg#rocket"></use>
+                  </svg></a></li>
+              <li class="nav__item"><a href="portfolio.html" title="My portfolio" class="nav__link nav__link_portfolio">Портфолио
+                  <svg class="nav__icon nav__icon_portfolio">
+                    <use xlink:href="img/svg/sprite.svg#briefcase"></use>
+                  </svg></a></li>
+            </ul>
+          </nav>
+          <main class="main">
+            <h1 class="main__header">Карьерный путь</h1>
+            <section class="main__content">
+              <div class="sample-wrapper">
+                <div class="sample"></div>
+              </div>
+              <arcticle class="experience">
+                <ul class="experience__list">
+                  <li class="experience__item">
+                    <div class="post">
+                      <p class="post__title">"Weblime"</p><span class="post__rank">Старший разработчик</span><span class="post__period">2015 - по настоящее время</span><span class="post__year">2016</span>
+                    </div>
+                  </li>
+                  <li class="experience__item">
+                    <div class="post">
+                      <p class="post__title">"Weblime"</p><span class="post__rank">Средний разработчик</span><span class="post__period">2013 - 2015</span><span class="post__year">2015</span>
+                    </div>
+                  </li>
+                  <li class="experience__item">
+                    <div class="post">
+                      <p class="post__title">"Weblime"</p><span class="post__rank">Младший разработчик</span><span class="post__period">2012 - 2013</span><span class="post__year">2013</span>
+                    </div>
+                  </li>
+                  <li class="experience__item">
+                    <div class="post">
+                      <p class="post__title">"Weblime"</p><span class="post__rank">Стажер</span><span class="post__period">2011 - 2012</span><span class="post__year">2012</span>
+                    </div>
+                  </li>
+                </ul>
+              </arcticle>
+            </section>
+          </main>
+        </div>
       </div>
       <footer class="footer">
-        <div class="footer__body"><span class="footer__info">Конфиденциальность сайта</span>
+        <div class="container container-footer">
+          <div class="secret">
+            <p class="secret__info">Конфиденциальность сайта</p>
+          </div>
           <div class="footer__social">
             <ul class="footer__list">
               <li class="footer__item"><a href="#" title="facebook" class="footer__link">

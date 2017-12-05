@@ -12,8 +12,11 @@
   <body>
     <div class="wrapper wrapper-about">
       <header class="header">
-        <div class="header__body">
-          <div class="avatar"><img src="img/ava_low.jpg" alt="photo" class="avatar__image"></div><span class="header__title">Анатолий Анатольев</span>
+        <div class="container container-header">
+          <div class="name">
+            <div class="avatar"><img src="img/ava_low.jpg" alt="photo" class="avatar__image"></div>
+            <p class="name__title">Анатолий Анатольев</p>
+          </div>
           <div class="communications">
             <div class="contacts"><a href="#" class="contacts__switcher">Мои контакты</a></div>
             <div class="contacts-mobile"><a href="tel:+79873456212" title="phone" class="contacts-mobile__link">
@@ -39,38 +42,49 @@
           </div>
         </div>
       </header>
-      <div class="container">
-        <nav class="nav">
-          <ul class="nav__list">
-            <li class="nav__item"><a href="about.html" title="About me" class="nav__link nav__link_about">Обо мне
-                <svg class="nav__icon nav__icon_about">
-                  <use xlink:href="img/svg/sprite.svg#spy"></use>
-                </svg></a></li>
-            <li class="nav__item"><a href="career.html" title="My career" class="nav__link nav__link_career">Карьерный путь
-                <svg class="nav__icon nav__icon_career">
-                  <use xlink:href="img/svg/sprite.svg#rocket"></use>
-                </svg></a></li>
-            <li class="nav__item"><a href="portfolio.html" title="My portfolio" class="nav__link nav__link_portfolio">Портфолио
-                <svg class="nav__icon nav__icon_portfolio">
-                  <use xlink:href="img/svg/sprite.svg#briefcase"></use>
-                </svg></a></li>
-          </ul>
-        </nav>
-        <main class="main">
-          <div class="portrait"><img src="img/big_avatar_low.jpg" alt="Photo" class="portrait__image"></div>
-          <section class="main__info">
-            <h1 class="main__header">Обо мне</h1>
-            <p class="main__text">Меня зовут Анатолий. Проживаю в городе Тольятти. В последнее время открыл для себя много интересного в JavaScript и всех сопутствующих тенденциях от Microsoft:ASP.NET 4...Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quidem eligendi aliquid nisi possimus repellendus omnis fugit modi perspiciatis libero aperiam molestias debitis labore similique voluptatibus quibusdam nostrum aspernatur necessitatibus sapiente numquam, error quod eos adipisci. Deleniti, dicta. Distinctio quaerat tenetur laborum quam necessitatibus harum quod error amet nemo! Quaerat, provident esse. Tempora doloremque dicta, beatae! Debitis facere delectus neque doloremque aliquid? Ipsum possimus doloribus quibusdam eaque ut voluptatibus cumque quasi at, voluptas nam. Dolorum aut reprehenderit laboriosam voluptas sit obcaecati accusamus doloremque expedita placeat illo eligendi harum, a repellat laborum quos optio, quia eos, beatae. Temporibus mollitia distinctio modi esse. Меня зовут Анатолий. Проживаю в городе Тольятти. В последнее время открыл для себя много интересного в JavaScript и всех сопутствующих тенденциях от Microsoft:ASP.NET 4...Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quidem eligendi aliquid nisi possimus repellendus omnis fugit modi perspiciatis libero aperiam molestias debitis labore similique voluptatibus quibusdam nostrum aspernatur necessitatibus sapiente numquam, error quod eos adipisci. Deleniti, dicta. Distinctio quaerat tenetur laborum quam necessitatibus harum quod error amet nemo! Quaerat, provident esse. Tempora doloremque dicta, beatae! Debitis facere delectus neque doloremque aliquid? Ipsum possimus doloribus quibusdam eaque ut voluptatibus cumque quasi at, voluptas nam. Dolorum aut reprehenderit laboriosam voluptas sit obcaecati accusamus doloremque expedita placeat illo eligendi harum, a repellat laborum quos optio, quia eos, beatae. Temporibus mollitia distinctio modi esse.</p>
-            <button title="Download summary" class="main__button">
-              <svg class="button-icon">
-                <use xlink:href="img/svg/sprite.svg#download"></use>
-              </svg>Скачать резюме
-            </button>
-          </section>
-        </main>
+      <div class="main-wrapper">
+        <div class="container container-main">
+          <nav class="nav">
+            <ul class="nav__list">
+              <li class="nav__item"><a href="about.html" title="About me" class="nav__link nav__link_about">Обо мне
+                  <svg class="nav__icon nav__icon_about">
+                    <use xlink:href="img/svg/sprite.svg#spy"></use>
+                  </svg></a></li>
+              <li class="nav__item"><a href="career.html" title="My career" class="nav__link nav__link_career">Карьерный путь
+                  <svg class="nav__icon nav__icon_career">
+                    <use xlink:href="img/svg/sprite.svg#rocket"></use>
+                  </svg></a></li>
+              <li class="nav__item"><a href="portfolio.html" title="My portfolio" class="nav__link nav__link_portfolio">Портфолио
+                  <svg class="nav__icon nav__icon_portfolio">
+                    <use xlink:href="img/svg/sprite.svg#briefcase"></use>
+                  </svg></a></li>
+            </ul>
+          </nav>
+          <main class="main">
+            <div class="portrait-wrapper">
+              <div class="portrait"><img src="img/big_avatar_low.jpg" alt="Photo" class="portrait__image"></div>
+            </div>
+            <div class="info">
+              <section class="biography">
+                <h1 class="biography__title">Обо мне</h1>
+                <p class="biography__text">Меня зовут Анатолий. Проживаю в городе Тольятти. В последнее время открыл для себя много интересного в JavaScript и всех сопутствующих тенденциях от Microsoft:ASP.NET 4...Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quidem eligendi aliquid nisi possimus repellendus omnis fugit modi perspiciatis libero aperiam molestias debitis labore similique voluptatibus quibusdam nostrum aspernatur necessitatibus sapiente numquam, error quod eos adipisci. Deleniti, dicta. Distinctio quaerat tenetur laborum quam necessitatibus harum quod error amet nemo! Quaerat, provident esse. Tempora doloremque dicta, beatae! Debitis facere delectus neque doloremque aliquid? Ipsum possimus doloribus quibusdam eaque ut voluptatibus cumque quasi at, voluptas nam. Dolorum aut reprehenderit laboriosam voluptas sit obcaecati accusamus doloremque expedita placeat illo eligendi harum, a repellat laborum quos optio, quia eos, beatae. Temporibus mollitia distinctio modi esse. Меня зовут Анатолий. Проживаю в городе Тольятти. В последнее время открыл для себя много интересного в JavaScript и всех сопутствующих тенденциях от Microsoft:ASP.NET 4...Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quidem eligendi aliquid nisi possimus repellendus omnis fugit modi perspiciatis libero aperiam molestias debitis labore similique voluptatibus quibusdam nostrum aspernatur necessitatibus sapiente numquam, error quod eos adipisci. Deleniti, dicta. Distinctio quaerat tenetur laborum quam necessitatibus harum quod error amet nemo! Quaerat, provident esse. Tempora doloremque dicta, beatae! Debitis facere delectus neque doloremque aliquid? Ipsum possimus doloribus quibusdam eaque ut voluptatibus cumque quasi at, voluptas nam. Dolorum aut reprehenderit laboriosam voluptas sit obcaecati accusamus doloremque expedita placeat illo eligendi harum, a repellat laborum quos optio, quia eos, beatae. Temporibus mollitia distinctio modi esse.</p>
+              </section>
+              <div class="button-wrapper">
+                <button title="Download summary" class="main__button">
+                  <svg class="button-icon">
+                    <use xlink:href="img/svg/sprite.svg#download"></use>
+                  </svg>Скачать резюме
+                </button>
+              </div>
+            </div>
+          </main>
+        </div>
       </div>
       <footer class="footer">
-        <div class="footer__body"><span class="footer__info">Конфиденциальность сайта</span>
+        <div class="container container-footer">
+          <div class="secret">
+            <p class="secret__info">Конфиденциальность сайта</p>
+          </div>
           <div class="footer__social">
             <ul class="footer__list">
               <li class="footer__item"><a href="#" title="facebook" class="footer__link">

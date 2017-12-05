@@ -5,15 +5,16 @@
     box-shadow: 0 1px 3px 0 rgba(0, 0, 0, .2);
     margin-bottom: 21px;
 }
-.header__body {
-    display: flex;
-    flex-flow: row wrap;
-    max-width: 940px;
-    margin: 0 auto;
-    align-items: center;
-    min-height: 79px;
-}
 
+.container-header {
+    align-items: center;
+    min-height: 80px;
+}
+.name {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
 .avatar {
 	width: 60px;
     height: 60px;
@@ -21,20 +22,16 @@
     border-radius: 50%;
     box-shadow: 0 0 0 1px rgb(190, 190, 190);
     overflow: hidden;
+    margin-right: 19px;
 }
 .avatar__image {
 	width: 100%;
 }
-.header__image {
-    
-}
-.header__title {
+.name__title {
     @include firaSans(regular);
     font-size: 18px;
-    margin-left: 19px;
     color: $lightBlack;
     line-height: 1.5;
-    margin-top: 4px;
 }
 .communications {
 	margin-left: auto;
@@ -150,6 +147,13 @@
 }
 
 @media screen and (max-width: 768px) {
+    .header {
+        margin-bottom: 6px;
+    }
+    .container {
+        max-width: 928px;
+        padding: 0;
+    }
     .avatar {
         margin-left: 21px;
     }
@@ -164,13 +168,12 @@
     .contacts-list__link {
         font-size: 16px;
     }
-    
 }
 @media screen and (max-width: 576px) {
     .header {
         margin-bottom: 11px;
     }
-    .header__title {
+    .name__title {
         font-size: 14px;
         margin-top: 0px;
         width: 70px;

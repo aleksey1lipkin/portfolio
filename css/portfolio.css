@@ -31,16 +31,11 @@
   display: flex;
   flex-direction: column; }
 
-.container {
-  flex: 1 0 auto;
-  flex-flow: row wrap;
-  display: flex;
-  max-width: 940px;
-  margin: 0 auto;
-  width: 100%; }
-
 .main {
   width: 75%; }
+
+.main-wrapper {
+  flex: 1 0 auto; }
 
 .main__header {
   font-size: 35px;
@@ -138,15 +133,19 @@
   content: "\f108"; }
 
 @media screen and (max-width: 768px) {
+  .header {
+    margin-bottom: 6px; }
   .nav {
-    margin-bottom: 21px; }
-  .container {
-    flex-direction: column; }
+    margin-bottom: 16px;
+    padding-left: 16px; }
+  .container-main {
+    flex-direction: column;
+    max-width: 728px;
+    align-self: center; }
+  .portfolio {
+    padding: 0; }
   .main {
-    width: 100%;
-    padding-left: 15px;
-    padding-right: 24px;
-    margin-top: -5px; }
+    width: 100%; }
   .card__example {
     height: 178px; }
   .content__about {

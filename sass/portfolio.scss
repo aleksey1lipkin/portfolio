@@ -11,16 +11,11 @@ $red: #e85f61;
     display: flex;
     flex-direction: column;
 }
-.container {
-	flex: 1 0 auto;
-	flex-flow: row wrap;
-	display: flex;
-    max-width: 940px;
-    margin: 0 auto;
-    width: 100%;
-}
 .main {
     width: 75%;
+}
+.main-wrapper {
+	flex: 1 0 auto;
 }
 .main__header {
     font-size: 35px;
@@ -114,17 +109,23 @@ $aboutBefore: phone, screen;
 	}
 }
 @media screen and (max-width: 768px) {
-	.nav {
-		margin-bottom: 21px;
+	.header {
+		margin-bottom: 6px;
 	}
-	.container {
+	.nav {
+		margin-bottom: 16px;
+		padding-left: 16px;
+	}
+	.container-main {
 		flex-direction: column;
+    	max-width: 728px;
+    	align-self: center;
+	}
+	.portfolio {
+		padding: 0;
 	}
 	.main {
 		width: 100%;
-		padding-left: 15px;
-		padding-right: 24px;
-   		margin-top: -5px;
 	}
 	.card__example {
 		height: 178px

@@ -26,18 +26,8 @@
   font-family: "Font Awesome";
   src: url("../fonts/fontawesome-webfont.woff"); }
 
-.wrapper {
-  display: flex;
-  flex-direction: column;
-  min-height: 100%; }
-
-.container {
-  display: flex;
-  width: 100%;
-  max-width: 940px;
-  margin: 0 auto;
-  flex: 1 0 auto;
-  flex-flow: row wrap; }
+.main-wrapper {
+  flex: 1 0 auto; }
 
 .main {
   width: 75%; }
@@ -45,24 +35,27 @@
 .main__header {
   font-size: 35px;
   line-height: 1.286;
-  margin-bottom: 23px;
+  margin-bottom: 22px;
   padding-left: 3px;
   font-family: "Fira Sans Medium", sans-serif; }
 
 .main__content {
   display: flex;
-  width: 100%;
-  flex-flow: row nowrap;
-  justify-content: space-between; }
+  flex-flow: row nowrap; }
+
+.sample-wrapper {
+  width: 35%;
+  display: flex;
+  justify-content: center; }
 
 .sample {
   overflow: hidden;
   width: 220px;
   height: 220px;
-  margin-bottom: 20px;
-  margin-left: 5px;
   border-radius: 9px;
-  background-color: #f6f6f6; }
+  background-color: #f6f6f6;
+  background: url("../img/sample_low.jpg") no-repeat center center;
+  background-size: cover; }
 
 .experience {
   width: 65%; }
@@ -161,35 +154,39 @@
   color: #33c1e3; }
 
 @media screen and (max-width: 768px) {
-  .container {
-    flex-direction: column; }
+  .header {
+    margin-bottom: 7px; }
+  .container-main {
+    flex-direction: column;
+    max-width: 728px;
+    align-self: center; }
   .main {
-    width: 100%;
-    padding-left: 15px; }
+    width: 100%; }
     .main__content {
       flex-flow: row nowrap; }
-  .picture {
+  .sample-wrapper {
+    justify-content: flex-start; }
+  .sample {
     width: 228px;
     height: 227px; }
   .main__header {
     padding-left: 4px; }
   .post {
     flex-shrink: 1; }
-  .experience {
-    padding-right: 20px; }
   .experience__item {
     max-width: 355px; } }
 
 @media screen and (max-width: 576px) {
-  .container {
-    max-width: 300px;
-    align-self: center; }
+  .nav {
+    margin-bottom: 13px; }
+  .container-main {
+    max-width: 300px; }
   .main {
     padding-left: 0; }
   .main__header {
     padding-left: 0;
     text-align: center;
-    margin-bottom: 7px; }
+    margin-bottom: 14px; }
   .main__content {
     flex-direction: column;
     align-items: center; }
@@ -209,10 +206,13 @@
     margin-bottom: 11px; }
   .post__period {
     font-size: 16px; }
-  .picture {
-    width: 219px;
+  .sample-wrapper {
+    width: 100%;
+    justify-content: center; }
+  .sample {
+    width: 220px;
     height: 218px;
-    margin-left: 0; }
+    margin-bottom: 20px; }
   .post::before, .post__year {
     display: none; }
   .experience__item:last-child .post__period {

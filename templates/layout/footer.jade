@@ -1,8 +1,9 @@
 - var footerLinks = {'facebook':'#', 'vk':'#', 'twitter':'#'};
 footer.footer
-	.footer__body
-		span.footer__info
-			| Конфиденциальность сайта
+	.container.container-footer
+		.secret
+			p.secret__info
+				| Конфиденциальность сайта
 		.footer__social
 			ul.footer__list
 				each val, key in footerLinks

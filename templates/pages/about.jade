@@ -23,24 +23,28 @@ html(lang="en")
 	body
 		div(class="wrapper #{wrapperClass}")
 			include ../layout/header
-			.container
-				include ../layout/nav
-				block main
-					main.main
-						.portrait
-							img(
-							class="portrait__image"
-							src="img/big_avatar_low.jpg"
-							alt="Photo")
-						section.main__info
-							h1.main__header
-								| Обо мне
-							p.main__text
-								| #{aboutMe} #{aboutMe}
-							button(title="Download summary").main__button
-								svg(
-								class="button-icon")
-									use(
-									xlink:href="img/svg/sprite.svg#download")
-								| Скачать резюме
+			.main-wrapper
+				.container.container-main
+					include ../layout/nav
+					block main
+						main.main
+							.portrait-wrapper
+								.portrait
+									img(
+									class="portrait__image"
+									src="img/big_avatar_low.jpg"
+									alt="Photo")
+							.info
+								section.biography
+									h1.biography__title
+										| Обо мне
+									p.biography__text
+										| #{aboutMe} #{aboutMe}
+								.button-wrapper
+									button(title="Download summary").main__button
+										svg(
+										class="button-icon")
+											use(
+											xlink:href="img/svg/sprite.svg#download")
+										| Скачать резюме
 			include ../layout/footer
