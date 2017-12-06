@@ -54,7 +54,7 @@ $red: #e85f61;
 	line-height: 1.4445;
     max-width: 380px;
     max-height: 286px;
-    margin-bottom: 57px;
+    margin-bottom: 56px;
     overflow: scroll;
     overflow-x: hidden;
     padding-left: 12px;
@@ -115,23 +115,25 @@ $red: #e85f61;
 		width: 100%;
 	}
 	.portrait-wrapper {
-		width: 33.33333%;
+		width: 31.31868%;
 	}
 	.info {
-		width: 66.66666%;
+		width: 68.68131%;
 	}
 	.portrait {
 		width: 175px;
 		height: 175px;
 	}
 	.biography__title {
+		padding-left: 20px;
 	}
 	.biography__text {
 		max-width: 430px;
 		max-height: 364px;
+		padding-left: 19px;
 	}
 	.main__button {
-		margin-right: 13px;
+		margin-right: 64px;
 	}
 }
 @media screen and (max-width: 576px) {
