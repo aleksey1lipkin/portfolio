@@ -108,7 +108,7 @@ $aboutBefore: phone, screen;
 		}
 	}
 }
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 992px) {
 	.header {
 		margin-bottom: 6px;
 	}
@@ -145,6 +145,7 @@ $aboutBefore: phone, screen;
 		text-align: center;
 	}
 	.container-main {
+		max-width: 350px;
         padding: 0px 10px;
     }
     .portfolio {

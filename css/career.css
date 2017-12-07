@@ -150,7 +150,7 @@
   font-family: "Fira Sans Bold", sans-serif;
   color: #33c1e3; }
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 992px) {
   .header {
     margin-bottom: 7px; }
   .container-main {
@@ -170,6 +170,8 @@
     padding-left: 4px; }
   .post {
     flex-shrink: 1; }
+  .experience__list {
+    margin-left: 25px; }
   .experience__item {
     max-width: 355px; } }
 
@@ -177,7 +179,8 @@
   .nav {
     margin-bottom: 13px; }
   .container-main {
-    padding: 0px 10px; }
+    padding: 0px 10px;
+    max-width: 350px; }
   .main {
     padding-left: 0; }
   .main__header {
@@ -190,6 +193,9 @@
   .experience {
     width: 100%;
     padding-right: 0; }
+  .experience__list {
+    align-items: center;
+    margin-left: 0; }
   .experience__item {
     width: 100%; }
   .post {
