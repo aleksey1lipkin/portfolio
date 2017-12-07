@@ -397,7 +397,8 @@ html {
     padding: 0;
     margin-bottom: 20px; }
   .nav__list {
-    padding: 0; }
+    padding: 0;
+    justify-content: center; }
   .nav__item {
     margin-right: 18px; }
   .nav__link {

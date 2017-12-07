@@ -108,8 +108,8 @@ $red: #e85f61;
 @media screen and (max-width: 768px) {
 	.container-main {
 		flex-direction: column;
-		max-width: 728px;
 		align-self: center;
+		padding: 0 20px;
 	}
 	.main {
 		width: 100%;
@@ -138,7 +138,7 @@ $red: #e85f61;
 }
 @media screen and (max-width: 576px) {
 	.container-main {
-		max-width: 300px;
+		padding: 0px 10px;
 	}
 	.main {
 		flex-direction: column;

@@ -155,7 +155,7 @@
     margin-bottom: 7px; }
   .container-main {
     flex-direction: column;
-    max-width: 728px;
+    padding: 0 20px;
     align-self: center; }
   .main {
     width: 100%; }
@@ -177,7 +177,7 @@
   .nav {
     margin-bottom: 13px; }
   .container-main {
-    max-width: 300px; }
+    padding: 0px 10px; }
   .main {
     padding-left: 0; }
   .main__header {

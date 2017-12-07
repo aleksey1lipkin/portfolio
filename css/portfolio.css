@@ -136,11 +136,10 @@
   .header {
     margin-bottom: 6px; }
   .nav {
-    margin-bottom: 16px;
-    padding-left: 16px; }
+    margin-bottom: 16px; }
   .container-main {
     flex-direction: column;
-    max-width: 728px;
+    padding: 0px 20px;
     align-self: center; }
   .portfolio {
     padding: 0; }
@@ -159,9 +158,8 @@
     padding-right: 0; }
   .main__header {
     text-align: center; }
-  .container {
-    max-width: 300px;
-    align-self: center; }
+  .container-main {
+    padding: 0px 10px; }
   .portfolio {
     padding-left: 0; }
   .portfolio__item {
